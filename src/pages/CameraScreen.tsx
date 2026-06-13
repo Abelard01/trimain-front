@@ -68,7 +68,7 @@ export default function CameraScreen() {
   };
 
   return (
-    <div className="min-h-screen bg-foreground flex flex-col">
+    <div className="bg-foreground flex flex-col" style={{height: '100dvh'}}>
       <canvas ref={canvasRef} className="hidden" />
       {/* Camera input — opens rear camera directly on mobile */}
       <input
