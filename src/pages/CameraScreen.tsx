@@ -114,8 +114,8 @@ export default function CameraScreen() {
         </div>
       ) : (
         <div className="flex-1 flex flex-col">
-          <div className="flex-1 flex items-center justify-center p-4">
-            <div className="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden border-2 border-primary-foreground/30">
+          <div className="flex-1 flex items-center justify-center p-4 min-h-0">
+            <div className="relative w-full max-w-sm rounded-2xl overflow-hidden border-2 border-primary-foreground/30" style={{aspectRatio: '1', maxHeight: 'calc(100vh - 180px)'}}>
               <video
                 ref={videoRef}
                 autoPlay
@@ -125,7 +125,7 @@ export default function CameraScreen() {
               />
             </div>
           </div>
-          <div className="flex items-center justify-around py-8 px-6">
+          <div className="flex items-center justify-around py-4 px-6 pb-8">
             <button
               onClick={() => galleryInputRef.current?.click()}
               className="w-12 h-12 rounded-full bg-card/20 flex items-center justify-center"
